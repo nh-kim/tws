@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 웹사이트</title>
+    <style>
+        body {
+            margin: 0;
+            background: black;
+            color: white;
+            font-family: '맑은 고딕', sans-serif;
+        }
+        nav {
+           background-color: #000;
+           padding: 10px;
+       }
+       nav a {
+           color: white;
+           text-decoration: none;
+           padding: 5px 10px;
+           margin-right: 5px;
+       }
+       nav a:hover {
+           color: black;
+           background-color: white;
+           border-radius: 15px;
+       }
+       .active {
+           color: black;
+           background-color: #FFF;
+           border-radius: 15px;
+       }        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+      .active { color: Black; background-color: #FFF; border-radius: 15px; }
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            max-width: 1200px;
+            height: 780px;
+        }
+        .image-container {
+            width: 400px;
+            height: 400px;
+            position: fixed;
+            top: 50%;
+            right: 100px;
+            transform: translateY(-50%);
+            overflow: hidden;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0;
+            transition: border-radius 0.3s ease;
+        }
+        .image-container a:hover img {
+            border-radius: 50%;
+        }
+        .text-container {
+            flex-grow: 1;
+            max-width: 500px;
+            padding: 20px;
+            text-align: left;
+            position: relative;
+        }
+        .title {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .lyrics-container {
+            width: 700px;
+            height: 500px;
+            overflow-y: scroll;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-right: 20px;
+            margin-left: -100px; /* 더 왼쪽으로 이동 */
+        }
+        .lyrics-container::-webkit-scrollbar {
+            display: none;
+        }
+        .description span, .album-description p {
+            font-size: 16px;
+            line-height: 2; /* 행간 조정 */
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+        .description span {
+            display: block;
+            animation: fadeInUp 1s ease forwards;
+            animation-delay: calc(var(--order) * 0.2s);
+        }
+        @keyframes fadeIn {
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+        .option {
+            padding: 10px 20px;
+            color: white;
+            cursor: pointer;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        .album-description {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 20px;
+            z-index: 1;
+            transition: transform 0.3s ease;
+            transform: translateY(-100%);
+        }
+        .album-description.show {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+           <nav>
+       <a href="all.html" class="active">all</a>
+        <a href="Newjins.html">Newjins</a>
+        <a href="Aespa.html">Aespa</a>
+        <a href="Ive.html">Ive</a>
+        <a href="Ateez.html">Ateez</a>
+        <a href="Tws.html">Tws</a>
+    </nav>
+    <div class="album-description">
+        <p>투어스 - 첫 만남은 계획대로 되지 않아</p>
+        <p>2024년 1월 22일에 발매된 TWS의 데뷔 앨범이자 미니 1집.</p>
+        <p>첫 만남은 계획대로 되지 않아라는 곡은 첫 만남의 설렘과 막연함, 그리고 TWS만의 풋풋한 감성을 담고 있는 타이틀곡 ‘첫 만남은 계획대로 되지 않아’는 꿈 속으로 들어가는 듯한 인트로를 시작으로 강렬한 드럼과 함께 짜릿한 기타, 신스 사운드가 가미된 하이브리드 팝(Hybrid Pop) 곡이다.
+</p>
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="lyrics-container">
+                <div class="title">첫 만남은 계획대로 되지 않아</div>
+                <div class="subtitle">투어스</div>
+                <div class="description">
+                    <span style="--order: 1;">Ay ay ay ay ay</span>
+                    <span style="--order: 2;">Ay ay ay ay ay</span>
+                    <span style="--order: 3;">거울 속에 내 표정 봐 봐</span>
+                    <span style="--order: 4;">느낌 So good 기다려온 D-day</span>
+                    <span style="--order: 5;">연습했던 손든 인사도 그대로 하면 돼</span>
+                    <span style="--order: 6;">Hairstyle check하고 한 번 Turn around</span>
+                    <span style="--order: 7;">발걸음은 매일 걷던 그 길로</span>
+                    <span style="--order: 8;">계획은 완벽 빨리 말 걸어보고 싶어, Hey</span>
+                    <span style="--order: 9;">Woo 문 앞에서 셋을 세어 본다, Yeh</span>
+                    <span style="--order: 10;">(셋, 둘, 하나)</span>
+                    <span style="--order: 11;">첫 만남은 너무 어려워</span>
+                    <span style="--order: 12;">계획대로 되는 게 없어서</span>
+                    <span style="--order: 13;">첫 만남은 너무 어려워</span>
+                    <span style="--order: 14;">내 이름은 말야</span>
+                    <span style="--order: 15;">Hey,</span>
+                    <span style="--order: 16;">안녕, 첫 마디를 건넬 때</span>
+                    <span style="--order: 17;">주변 소린 Canceled</span>
+                    <span style="--order: 18;">네 말소리는 Playlist</span>
+                    <span style="--order: 19;">Yeh,<span>
+                    <span style="--order: 20;">질문은 나의 용기, 알려줘 너의</span>
+                    <span style="--order: 21;">"이름이 뭐야?"</span>
+                    <span style="--order: 22;">너와 내 거리는 세 걸음 남았어, Yeh</span>
+                    <span style="--order: 23;">(셋, 둘, 하나)</span>
+                    <span style="--order: 24;">첫 만남은 너무 어려워</span>
+                    <span style="--order: 25;">계획대로 되는 게 없어서</span>
+                    <span style="--order: 26;">첫 만남은 너무 어려워</span>
+                    <span style="--order: 27;">내 이름은 말야</span>
+                    <span style="--order: 28;">이 순간, Feels so wonderful</span>
+                    <span style="--order: 29;">조금은 뚝딱거려도</span>
+                    <span style="--order: 30;">어색한 인사까지도</span>
+                    <span style="--order: 31;">너와 나의 첫 만남</span>
+                    <span style="--order: 32;">우리의 사이 Beautiful</span>
+                    <span style="--order: 33;">내일도 내일모레도</span>
+                    <span style="--order: 34;">기억해, 영원히 반짝일 순간</span>
+                    <span style="--order: 35;">Wait wait!</span>
+                    <span style="--order: 36;">Na na na-</span>
+                    <span style="--order: 37;">이렇게 만나서 반가워</span>
+                    <span style="--order: 38;">내일 또 봐 안녕</span>
+                </div>
+            </div>
+            <div class="image-container">
+                <a href="https://youtu.be/hVAc1Vf2ITU?si=tqjeGrnNBYMplY8e" target="_blank">
+                    <img src="https://i.imgur.com/7K83ocM.jpeg" alt="이미지">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        const albumDescription = document.querySelector('.album-description');
+        const container = document.querySelector('.container');
+
+        container.addEventListener('click', () => {
+            albumDescription.classList.toggle('show');
+        });
+
+        container.addEventListener('scroll', () => {
+            albumDescription.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
